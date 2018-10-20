@@ -85,7 +85,7 @@ class Application():
         if valoutput < 0:
             print('You are in the negative, you have a deficit of ' + 'Rs' + str(valoutput))
         if valoutput == 0:
-            print('You have broken even, you are spending exactly as much as you make.')
+            print('You are spending exactly as much as you make.')
         if valoutput > 0:
             print('You are in the positive, you have a surplus of ' + 'Rs' + str(valoutput))
         another = input('Would you like to run another analysis? [y/n]: ')

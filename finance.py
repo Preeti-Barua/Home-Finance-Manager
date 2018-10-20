@@ -55,8 +55,8 @@ class Application():
         income = [income for income in self.income_list]
         incomedict = dict(zip(name, income))
         for k in incomedict:
-            print(k + ': ', '$' + str(incomedict[k]))
-        print('Total user income: ', '$' + str(self.income))
+            print(k + ': ', 'Rs' + str(incomedict[k]))
+        print('Total user income: ', 'Rs' + str(self.income))
         self.prompt_expense()
 
     def prompt_expense(self):
@@ -76,18 +76,18 @@ class Application():
         expense = [income for income in self.expense_list]
         expensedict = dict(zip(name, expense))
         for k in expensedict:
-            print(k + ': ', '$' + str(expensedict[k]))
-        print('Total user expenses: ', '$' + str(self.expenses))
+            print(k + ': ', 'Rs' + str(expensedict[k]))
+        print('Total user expenses: ', 'Rs' + str(self.expenses))
         self.uservalue()
 
     def uservalue(self):
         valoutput = self.income - self.expenses
         if valoutput < 0:
-            print('You are in the negative, you have a deficit of ' + '$' + str(valoutput))
+            print('You are in the negative, you have a deficit of ' + 'Rs' + str(valoutput))
         if valoutput == 0:
             print('You have broken even, you are spending exactly as much as you make.')
         if valoutput > 0:
-            print('You are in the positive, you have a surplus of ' + '$' + str(valoutput))
+            print('You are in the positive, you have a surplus of ' + 'Rs' + str(valoutput))
         another = input('Would you like to run another analysis? [y/n]: ')
         if another == 'y':
             self.reset_program()
